@@ -42,10 +42,8 @@ while game_is_on:
         score.game_over()
 
     # Detect collision with its own body
-    for seg in snake.snake_parts:
-        if snake.head == seg:
-            pass
-        elif snake.head.distance(seg) < 10:
+    for seg in snake.snake_parts[1:]:
+        if snake.head.distance(seg) < 10:
             game_is_on = False
             score.game_over()
 
