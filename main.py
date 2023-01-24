@@ -1,6 +1,7 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 import time
 from snake import Snake
+from food import Food
 # Screen setup
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -10,6 +11,7 @@ screen.title('Anaconda Snake Game')
 screen.tracer(0)
 
 snake = Snake()
+food = Food()
 
 # The screen starts listening to some key press
 screen.listen()
